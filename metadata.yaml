@@ -1,0 +1,5 @@
+homepage: "https://okspin.tech/"
+documentation: "https://github.com/okspin/gtm-oks-tag/blob/main/README.md"
+versions:
+  - sha: 1e6e674a6abdd3d6241172dc05c643cb63d6d908
+    changeNotes: Initial release.
