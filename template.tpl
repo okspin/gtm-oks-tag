@@ -50,107 +50,107 @@ ___TEMPLATE_PARAMETERS___
     "macrosInSelect": false,
     "selectItems": [
       {
-        "value": "event_add_payment_info",
+        "value": "EVENT_ADD_PAYMENT_INFO",
         "displayValue": "EVENT_ADD_PAYMENT_INFO"
       },
       {
-        "value": "event_add_to_cart",
+        "value": "EVENT_ADD_TO_CART",
         "displayValue": "EVENT_ADD_TO_CART"
       },
       {
-        "value": "event_button_click",
+        "value": "EVENT_BUTTON_CLICK",
         "displayValue": "EVENT_BUTTON_CLICK"
       },
       {
-        "value": "event_purchase",
+        "value": "EVENT_PURCHASE",
         "displayValue": "EVENT_PURCHASE"
       },
       {
-        "value": "event_content_view",
+        "value": "EVENT_CONTENT_VIEW",
         "displayValue": "EVENT_CONTENT_VIEW"
       },
       {
-        "value": "event_download",
+        "value": "EVENT_DOWNLOAD",
         "displayValue": "EVENT_DOWNLOAD"
       },
       {
-        "value": "event_form_submit",
+        "value": "EVENT_FORM_SUBMIT",
         "displayValue": "EVENT_FORM_SUBMIT"
       },
       {
-        "value": "event_initiated_checkout",
+        "value": "EVENT_INITIATED_CHECKOUT",
         "displayValue": "EVENT_INITIATED_CHECKOUT"
       },
       {
-        "value": "event_contact",
+        "value": "EVENT_CONTACT",
         "displayValue": "EVENT_CONTACT"
       },
       {
-        "value": "event_place_order",
+        "value": "EVENT_PLACE_ORDER",
         "displayValue": "EVENT_PLACE_ORDER"
       },
       {
-        "value": "event_search",
+        "value": "EVENT_SEARCH",
         "displayValue": "EVENT_SEARCH"
       },
       {
-        "value": "event_complete_registration",
+        "value": "EVENT_COMPLETE_REGISTRATION",
         "displayValue": "EVENT_COMPLETE_REGISTRATION"
       },
       {
-        "value": "event_add_to_wishlist",
+        "value": "EVENT_ADD_TO_WISHLIST",
         "displayValue": "EVENT_ADD_TO_WISHLIST"
       },
       {
-        "value": "event_subscribe",
+        "value": "EVENT_SUBSCRIBE",
         "displayValue": "EVENT_SUBSCRIBE"
       },
       {
-        "value": "event_first_deposit",
+        "value": "EVENT_FIRST_DEPOSIT",
         "displayValue": "EVENT_FIRST_DEPOSIT"
       },
       {
-        "value": "event_credit_approval",
+        "value": "EVENT_CREDIT_APPROVAL",
         "displayValue": "EVENT_CREDIT_APPROVAL"
       },
       {
-        "value": "event_loan_application",
+        "value": "EVENT_LOAN_APPLICATION",
         "displayValue": "EVENT_LOAN_APPLICATION"
       },
       {
-        "value": "event_loan_credit",
+        "value": "EVENT_LOAN_CREDIT",
         "displayValue": "EVENT_LOAN_CREDIT"
       },
       {
-        "value": "event_loan_disbursal",
+        "value": "EVENT_LOAN_DISBURSAL",
         "displayValue": "EVENT_LOAN_DISBURSAL"
       },
       {
-        "value": "event_credit_card_application",
+        "value": "EVENT_CREDIT_CARD_APPLICATION",
         "displayValue": "EVENT_CREDIT_CARD_APPLICATION"
       },
       {
-        "value": "event_key_inapp_event",
+        "value": "EVENT_KEY_INAPP_EVENT",
         "displayValue": "EVENT_KEY_INAPP_EVENT"
       },
       {
-        "value": "event_key_inapp_event_1",
+        "value": "EVENT_KEY_INAPP_EVENT_1",
         "displayValue": "EVENT_KEY_INAPP_EVENT_1"
       },
       {
-        "value": "event_key_inapp_event_2",
+        "value": "EVENT_KEY_INAPP_EVENT_2",
         "displayValue": "EVENT_KEY_INAPP_EVENT_2"
       },
       {
-        "value": "event_key_inapp_event_3",
+        "value": "EVENT_KEY_INAPP_EVENT_3",
         "displayValue": "EVENT_KEY_INAPP_EVENT_3"
       },
       {
-        "value": "event_ad_view",
+        "value": "EVENT_AD_VIEW",
         "displayValue": "EVENT_AD_VIEW"
       },
       {
-        "value": "event_ad_click",
+        "value": "EVENT_AD_CLICK",
         "displayValue": "EVENT_AD_CLICK"
       }
     ],
@@ -213,7 +213,7 @@ const getType = require("getType");
 const copyFromWindow = require("copyFromWindow");
 let _okTag = copyFromWindow("_okTag") || [];
 
-const accountId = data.accountId;
+const accountId = data.advAppId;
 
 // Build the payload for the _okTag call
 const params = {};
@@ -310,249 +310,214 @@ if (data.enhancedEcomm) {
   log("eventModel:" + eventModel);
 
   if (
-    data.eventType === "event_add_payment_info" &&
-    event === "event_add_payment_info"
+    data.eventType === "EVENT_ADD_PAYMENT_INFO"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_ADD_PAYMENT_INFO";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_add_to_cart" &&
-    event === "event_add_to_cart"
+    data.eventType === "EVENT_ADD_TO_CART" 
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_ADD_TO_CART";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_button_click" &&
-    event === "event_button_click"
+    data.eventType === "EVENT_BUTTON_CLICK"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_BUTTON_CLICK";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_purchase" &&
-    event === "event_purchase"
+    data.eventType === "EVENT_PURCHASE"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_PURCHASE";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_content_view" &&
-    event === "event_content_view"
+    data.eventType === "EVENT_CONTENT_VIEW"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_CONTENT_VIEW";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_download" &&
-    event === "event_download"
+    data.eventType === "EVENT_DOWNLOAD"
   ) {
     params.data = eventModel;
-    params.eid = event;
-    params.type = "event";
-  }
-
-  if (
-    data.eventType === "event_download" &&
-    event === "event_download"
-  ) {
-    params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENt_DOWNLOAD";
     params.type = "event";
   }
   
   if (
-    data.eventType === "event_form_submit" &&
-    event === "event_form_submit"
+    data.eventType === "EVENT_FORM_SUBMIT" 
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_FORM_SUBMIT";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_initiated_checkout" &&
-    event === "event_initiated_checkout"
+    data.eventType === "EVENT_INITIATED_CHECKOUT"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_INITIATED_CHECKOUT";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_contact" &&
-    event === "event_contact"
+    data.eventType === "EVENT_CONTACT"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_CONTACT";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_place_order" &&
-    event === "event_place_order"
+    data.eventType === "EVENT_PLACE_ORDER"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_PLACE_ORDER";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_search" &&
-    event === "event_search"
+    data.eventType === "EVENT_SEARCH"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_SEARCH";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_complete_registration" &&
-    event === "event_complete_registration"
+    data.eventType === "EVENT_SEARCHEVENT_COMPLETE_REGISTRATION"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_SEARCHEVENT_COMPLETE_REGISTRATION";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_add_to_wishlist" &&
-    event === "event_add_to_wishlist"
+    data.eventType === "EVENT_ADD_TO_WISHLIST"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_ADD_TO_WISHLIST";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_subscribe" &&
-    event === "event_subscribe"
+    data.eventType === "EVENT_SUBSCRIBE"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_SUBSCRIBE";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_first_deposit" &&
-    event === "event_first_deposit"
+    data.eventType === "EVENT_FIRST_DEPOSIT" 
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_FIRST_DEPOSIT";
     params.type = "event";
   }
   
   if (
-    data.eventType === "event_credit_approval" &&
-    event === "event_credit_approval"
+    data.eventType === "EVENT_CREDIT_APPROVAL"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_CREDIT_APPROVAL";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_loan_application" &&
-    event === "event_loan_application"
+    data.eventType === "EVENT_LOAN_APPLICATION"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_LOAN_APPLICATION";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_loan_credit" &&
-    event === "event_loan_credit"
+    data.eventType === "EVENT_LOAN_CREDIT"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_LOAN_CREDIT";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_loan_disbursal" &&
-    event === "event_loan_disbursal"
+    data.eventType === "EVENT_LOAN_DISBURSAL" 
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_LOAN_DISBURSAL";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_credit_card_application" &&
-    event === "event_credit_card_application"
+    data.eventType === "EVENT_CREDIT_CARD_APPLICATION" 
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_CREDIT_CARD_APPLICATION";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_key_inapp_event" &&
-    event === "event_key_inapp_event"
+    data.eventType === "EVENT_KEY_INAPP_EVENT"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_KEY_INAPP_EVENT";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_key_inapp_event_1" &&
-    event === "event_key_inapp_event_1"
+    data.eventType === "EVENT_KEY_INAPP_EVENT_1"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_KEY_INAPP_EVENT_1";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_key_inapp_event_2" &&
-    event === "event_key_inapp_event_2"
+    data.eventType === "EVENT_KEY_INAPP_EVENT_2"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_KEY_INAPP_EVENT_2";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_key_inapp_event_3" &&
-    event === "event_key_inapp_event_3"
+    data.eventType === "EVENT_KEY_INAPP_EVENT_3" 
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_KEY_INAPP_EVENT_3";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_ad_view" &&
-    event === "event_ad_view"
+    data.eventType === "EVENT_AD_VIEW"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_AD_VIEW";
     params.type = "event";
   }
 
   if (
-    data.eventType === "event_ad_click" &&
-    event === "event_ad_click"
+    data.eventType === "EVENT_AD_CLICK"
   ) {
     params.data = eventModel;
-    params.eid = event;
+    params.eid = "EVENT_AD_CLICK";
     params.type = "event";
   }
 
-  log("event params eid" + params.eid);
+  log("event params eid " + params.eid);
 }
 
 
@@ -732,6 +697,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 10/10/2023, 5:15:59 PM
+Created on 02/12/2025, 4:15:59 PM
 
 
