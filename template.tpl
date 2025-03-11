@@ -398,10 +398,10 @@ if (data.enhancedEcomm) {
   }
 
   if (
-    data.eventType === "EVENT_SEARCHEVENT_COMPLETE_REGISTRATION"
+    data.eventType === "EVENT_COMPLETE_REGISTRATION"
   ) {
     params.data = eventModel;
-    params.eid = "EVENT_SEARCHEVENT_COMPLETE_REGISTRATION";
+    params.eid = "EVENT_COMPLETE_REGISTRATION";
     params.type = "event";
   }
 
