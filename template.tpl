@@ -10,7 +10,7 @@ ___INFO___
 
 {
   "type": "TAG",
-  "id": "cvt_temp_public_id",
+  "id": "cvt_MRLSD",
   "version": 1,
   "securityGroups": [],
   "displayName": "OKSpin E-Commerce",
@@ -353,7 +353,7 @@ if (data.enhancedEcomm) {
     data.eventType === "EVENT_DOWNLOAD"
   ) {
     params.data = eventModel;
-    params.eid = "EVENt_DOWNLOAD";
+    params.eid = "EVENT_DOWNLOAD";
     params.type = "event";
   }
   
