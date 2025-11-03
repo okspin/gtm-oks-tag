@@ -12,7 +12,6 @@ ___INFO___
   "type": "TAG",
   "id": "cvt_MRLSD",
   "version": 1,
-  "securityGroups": [],
   "displayName": "OKSpin E-Commerce",
   "brand": {
     "id": "github.com_okspin",
@@ -22,7 +21,8 @@ ___INFO___
   "description": "OKSpin",
   "containerContexts": [
     "WEB"
-  ]
+  ],
+  "securityGroups": []
 }
 
 
@@ -152,6 +152,14 @@ ___TEMPLATE_PARAMETERS___
       {
         "value": "EVENT_AD_CLICK",
         "displayValue": "EVENT_AD_CLICK"
+      },
+      {
+        "value": "EVENT_PWA_INSTALL",
+        "displayValue": "EVENT_PWA_INSTALL"
+      },
+      {
+        "value": "EVENT_PWA_OPEN",
+        "displayValue": "EVENT_PWA_OPEN"
       }
     ],
     "simpleValueType": true,
@@ -514,6 +522,22 @@ if (data.enhancedEcomm) {
   ) {
     params.data = eventModel;
     params.eid = "EVENT_AD_CLICK";
+    params.type = "event";
+  }
+  
+    if (
+    data.eventType === "EVENT_PWA_INSTALL"
+  ) {
+    params.data = eventModel;
+    params.eid = "EVENT_PWA_INSTALL";
+    params.type = "event";
+  }
+  
+   if (
+    data.eventType === "EVENT_PWA_OPEN"
+  ) {
+    params.data = eventModel;
+    params.eid = "EVENT_PWA_OPEN";
     params.type = "event";
   }
 
